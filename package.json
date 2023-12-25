@@ -4,7 +4,8 @@
   "main": "index.ts",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node index.ts"
+    "start": "ts-node index.ts",
+    "build":"tsc --build"
   },
   "dependencies": {
     "crawler": "^1.4.0",
