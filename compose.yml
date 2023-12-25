@@ -1,0 +1,28 @@
+version: '3'
+services:
+  postgresql:
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data/pq:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_PORT=5432
+    networks:
+      - dbnet
+
+  image-crawler:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: on-failure
+    env_file:
+      - .env.local
+    networks:
+      - dbnet
+
+networks:
+  dbnet:
