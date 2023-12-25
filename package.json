@@ -1,0 +1,19 @@
+{
+  "name": "image-crawler",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+  "dependencies": {
+    "crawler": "^1.4.0",
+    "dotenv": "^16.3.1",
+    "pg": "^8.11.3",
+    "reflect-metadata": "^0.2.1",
+    "sharp": "^0.33.1",
+    "ts-node": "^10.9.2",
+    "typeorm": "^0.3.17",
+    "typescript": "^5.3.3"
+  }
+}
