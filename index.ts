@@ -13,6 +13,7 @@ async function main() {
   // crawl
   const crawler = new Crawler();
   const buffers = await crawler.crawlAndResize();
+  console.log("images crawl and resize");
 
   //   save to db
   await imageRepo.insert(
@@ -23,6 +24,8 @@ async function main() {
       return image;
     })
   );
+  console.log("data save into db");
+  await AppDataSource.destroy();
 }
 
 main();
