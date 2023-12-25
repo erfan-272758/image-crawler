@@ -15,5 +15,8 @@
     "ts-node": "^10.9.2",
     "typeorm": "^0.3.17",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/crawler": "^1.2.6"
   }
 }
