@@ -1,11 +1,10 @@
 import { config as dotenvConfig } from "dotenv";
+dotenvConfig({ path: ".env.local" });
 
 class Config {
-  env: { [key: string]: string } = {};
+  env: { [key: string]: string } = process.env;
 
-  async setupConfig() {
-    dotenvConfig({ path: ".env.local", processEnv: this.env });
-  }
+  setupConfig() {}
 }
 
 const config = new Config();
